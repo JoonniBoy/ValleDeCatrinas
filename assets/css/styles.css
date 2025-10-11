@@ -1,0 +1,135 @@
+/* Estilos base para los iconos de Google */
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24
+}
+
+/* Sombra en la cabecera cuando se hace scroll */
+header.scrolled {
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+/* Animación de entrada para el contenido principal */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.8s ease-in-out forwards;
+}
+
+/* Estilos para las tarjetas de catrinas */
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Corresponde a space-y-4 de Tailwind */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.card-image {
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    aspect-ratio: 16 / 9;
+    background-size: cover;
+    border-radius: 0.75rem; /* rounded-xl */
+}
+
+.card-content {
+    flex-grow: 1;
+}
+
+.card-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 0.5rem; /* gap-2 */
+    padding: 0.75rem 0; /* py-3 */
+    font-weight: 700; /* font-bold */
+    color: white;
+    border-radius: 0.5rem; /* rounded-lg */
+    background-color: #a413ec; /* bg-primary */
+    transition: background-color 0.3s ease;
+}
+
+.card-button:hover {
+    background-color: #8e11ce; /* Un tono más oscuro de primary */
+}
+
+/* Animación de pulso para los botones principales */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(164, 19, 236, 0.4);
+    }
+    50% {
+        transform: scale(1.02);
+        box-shadow: 0 0 0 10px rgba(164, 19, 236, 0);
+    }
+}
+
+.cta-button {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background-color: #a413ec;
+    color: white;
+    font-weight: 700;
+    padding: 1rem 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px -1px rgba(164, 19, 236, 0.3), 0 2px 4px -2px rgba(164, 19, 236, 0.3);
+    transition: all 0.3s ease;
+    animation: pulse 2.5s infinite;
+}
+
+.cta-button:hover {
+    background-color: #8e11ce;
+    transform: scale(1.05);
+    animation-play-state: paused; /* Pausa la animación de pulso al pasar el cursor */
+}
+
+.cta-button-map {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+    background-color: #a413ec;
+    color: white;
+    font-weight: 700;
+    font-size: 1.125rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    animation: pulse 2.5s infinite;
+}
+
+.cta-button-map:hover {
+    background-color: #8e11ce;
+    transform: scale(1.05);
+    animation-play-state: paused;
+}
+
+
+/* Animaciones al hacer scroll */
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

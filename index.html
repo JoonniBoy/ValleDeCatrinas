@@ -1,14 +1,272 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hello World</title>
-  <link href='/style.css' rel='stylesheet'>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Valle de Catrinas - Atlixco</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+    <script src="https://cdn.tailwindcss.com?plugins=container-queries"></script>
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#a413ec",
+                        "background-light": "#f7f6f8",
+                        "background-dark": "#1c1022",
+                        "foreground-light": "#170d1b",
+                        "foreground-dark": "#f7f6f8",
+                        "subtle-light": "#6b5874",
+                        "subtle-dark": "#a395aa",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
 </head>
-<body>
-  <h1>Hello, world!</h1>
-  <button onclick="console.log('hello');">Press me</button>
-  <script defer type="text/javascript" src="/main.js"></script>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-foreground-light dark:text-foreground-dark">
+
+    <div class="max-w-6xl mx-auto">
+
+        <header class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm transition-shadow duration-300">
+            <div class="max-w-md mx-auto flex items-center p-4 md:max-w-6xl">
+                <h1 class="flex-1 text-xl font-bold text-center">Valle de Catrinas</h1>
+                <a href="#mapa" class="flex items-center justify-center rounded-full h-10 w-10 text-foreground-light dark:text-foreground-dark hover:bg-primary/10 transition-colors">
+                    <span class="material-symbols-outlined">map</span>
+                </a>
+            </div>
+        </header>
+
+        <main class="fade-in">
+            <section id="inicio" class="max-w-md mx-auto md:max-w-2xl">
+                <div class="w-full h-80 md:h-96 bg-center bg-no-repeat bg-cover rounded-b-2xl md:rounded-2xl" style='background-image: url("assets/imgs/Collage.png");'></div>
+                <div class="px-6 py-8 text-center">
+                    <h2 class="text-3xl font-extrabold leading-tight tracking-tight text-foreground-light dark:text-foreground-dark">
+                        ¡Descubre el Espectacular <span class="text-primary">Valle de Catrinas</span> en Atlixco!
+                    </h2>
+                    <p class="mt-4 text-base text-subtle-light dark:text-subtle-dark">
+                        Embárcate en un recorrido lleno de arte, cultura y tradición. Encuentra todas las catrinas monumentales que adornan nuestra ciudad.
+                    </p>
+                </div>
+                <div class="px-6 pb-12">
+                    <a href="#galeria" class="cta-button">
+                        Comenzar Recorrido
+                    </a>
+                </div>
+            </section>
+
+            <section id="galeria" class="p-4 space-y-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <div class="card scroll-animate">
+                        <div class="card-image" style='background-image: url("assets/imgs/Tlachiquero.jpg");'></div>
+                        <div class="card-content">
+                            <h2 class="text-xl font-bold">Tlachiquero</h2>
+                            <p class="text-subtle-light dark:text-subtle-dark">Campo de cempasúchil</p>
+                        </div>
+                        <button class="card-button" data-coords="18.902824187606, -98.42419198505873">
+                            <span class="material-symbols-outlined">location_on</span> Ver Ubicación Exacta
+                        </button>
+                    </div>
+
+                    <div class="card scroll-animate">
+                        <div class="card-image" style='background-image: url("assets/imgs/Jimador.jpg");'></div>
+                         <div class="card-content">
+                            <h2 class="text-xl font-bold">Jimador</h2>
+                            <p class="text-subtle-light dark:text-subtle-dark">Campo de cempasúchil</p>
+                        </div>
+                        <button class="card-button" data-coords="18.902824187606, -98.42419198505873">
+                            <span class="material-symbols-outlined">location_on</span> Ver Ubicación Exacta
+                        </button>
+                    </div>
+
+                    <div class="card scroll-animate">
+                        <div class="card-image" style='background-image: url("assets/imgs/.jpg");'></div>
+                         <div class="card-content">
+                            <h2 class="text-xl font-bold">Ferrocarrilero</h2>
+                            <p class="text-subtle-light dark:text-subtle-dark">Antigua Hacienda San Mateo.</p>
+                        </div>
+                        <button class="card-button" data-coords="18.904678718824727, -98.43403100248452">
+                            <span class="material-symbols-outlined">location_on</span> Ver Ubicación Exacta
+                        </button>
+                    </div>
+
+                    <div class="card scroll-animate">
+                        <div class="card-image" style='background-image: url("assets/imgs/Marchanta.jpg");'></div>
+                         <div class="card-content">
+                            <h2 class="text-xl font-bold">Marchanta</h2>
+                            <p class="text-subtle-light dark:text-subtle-dark">Avenida Nicolás Bravo.</p>
+                        </div>
+                        <button class="card-button" data-coords="18.908144221532066, -98.43230847693806">
+                            <span class="material-symbols-outlined">location_on</span> Ver Ubicación Exacta
+                        </button>
+                    </div>
+
+                    <div class="card scroll-animate">
+                        <div class="card-image" style='background-image: url("assets/imgs/Alfarero.jpg");'></div>
+                        <div class="card-content">
+                            <h2 class="text-xl font-bold">Alfarero</h2>
+                            <p class="text-subtle-light dark:text-subtle-dark">Centro de convenciones.</p>
+                        </div>
+                        <button class="card-button" data-coords="18.908550239830003, -98.43183459348191">
+                            <span class="material-symbols-outlined">location_on</span> Ver Ubicación Exacta
+                        </button>
+                    </div>
+    
+                    <div class="card scroll-animate">
+                        <div class="card-image" style='background-image: url("assets/imgs/Organillero.jpg");'></div>
+                         <div class="card-content">
+                            <h2 class="text-xl font-bold">Organillero</h2>
+                            <p class="text-subtle-light dark:text-subtle-dark">Zócalo de Atlixco.</p>
+                        </div>
+                        <button class="card-button" data-coords="18.90925559838995, -98.4344069737488">
+                            <span class="material-symbols-outlined">location_on</span> Ver Ubicación Exacta
+                        </button>
+                    </div>
+    
+                    <div class="card scroll-animate">
+                        <div class="card-image" style='background-image: url("assets/imgs/Bolero.jpg");'></div>
+                         <div class="card-content">
+                            <h2 class="text-xl font-bold">Bolero</h2>
+                            <p class="text-subtle-light dark:text-subtle-dark">Zócalo de Atlixco</p>
+                        </div>
+                        <button class="card-button" data-coords="18.909681304168153, -98.434000490329">
+                            <span class="material-symbols-outlined">location_on</span> Ver Ubicación Exacta
+                        </button>
+                    </div>
+
+                    <div class="card scroll-animate">
+                        <div class="card-image" style='background-image: url("assets/imgs/Globero.jpg");'></div>
+                         <div class="card-content">
+                            <h2 class="text-xl font-bold">Globero</h2>
+                            <p class="text-subtle-light dark:text-subtle-dark">Avenida Hidalgo.</p>
+                        </div>
+                        <button class="card-button" data-coords="18.91013963034272, -98.43662657130263">
+                            <span class="material-symbols-outlined">location_on</span> Ver Ubicación Exacta
+                        </button>
+                    </div>
+
+                    <div class="card scroll-animate">
+                        <div class="card-image" style='background-image: url("assets/imgs/Panadero.jpg");'></div>
+                         <div class="card-content">
+                            <h2 class="text-xl font-bold">Panadero</h2>
+                            <p class="text-subtle-light dark:text-subtle-dark">Ex Convento de San Francisco.</p>
+                        </div>
+                        <button class="card-button" data-coords="18.910850014041433, -98.4384880768807">
+                            <span class="material-symbols-outlined">location_on</span> Ver Ubicación Exacta
+                        </button>
+                    </div>
+
+                    <div class="card scroll-animate">
+                        <div class="card-image" style='background-image: url("assets/imgs/Tejedora_de_cintura.jpg");'></div>
+                         <div class="card-content">
+                            <h2 class="text-xl font-bold">Tejedora de cintura</h2>
+                            <p class="text-subtle-light dark:text-subtle-dark">Plazuela de la danza.</p>
+                        </div>
+                        <button class="card-button" data-coords="18.913017024450134, -98.43741580820343">
+                            <span class="material-symbols-outlined">location_on</span> Ver Ubicación Exacta
+                        </button>
+                    </div>
+
+                    <div class="card scroll-animate">
+                        <div class="card-image" style='background-image: url("assets/imgs/Herrero.jpg");'></div>
+                         <div class="card-content">
+                            <h2 class="text-xl font-bold">Herrero</h2>
+                            <p class="text-subtle-light dark:text-subtle-dark">Parque de la Soledad.</p>
+                        </div>
+                        <button class="card-button" data-coords="18.91121951009421, -98.43991593680217">
+                            <span class="material-symbols-outlined">location_on</span> Ver Ubicación Exacta
+                        </button>
+                    </div>
+
+                    <div class="card scroll-animate">
+                        <div class="card-image" style='background-image: url("assets/imgs/Albañil.jpg");'></div>
+                         <div class="card-content">
+                            <h2 class="text-xl font-bold">Albañil</h2>
+                            <p class="text-subtle-light dark:text-subtle-dark">Panteón Municipal.</p>
+                        </div>
+                        <button class="card-button" data-coords="18.90833807011618, -98.44142300600213">
+                            <span class="material-symbols-outlined">location_on</span> Ver Ubicación Exacta
+                        </button>
+                    </div>
+
+                    <div class="card scroll-animate">
+                        <div class="card-image" style='background-image: url("assets/imgs/Tortillera.jpg");'></div>
+                         <div class="card-content">
+                            <h2 class="text-xl font-bold">Tortillera</h2>
+                            <p class="text-subtle-light dark:text-subtle-dark">Los Arcos.</p>
+                        </div>
+                        <button class="card-button" data-coords="18.907968287578004, -98.44847146602284">
+                            <span class="material-symbols-outlined">location_on</span> Ver Ubicación Exacta
+                        </button>
+                    </div>
+
+                    <div class="card scroll-animate">
+                        <div class="card-image" style='background-image: url("assets/imgs/Floricultora.jpg");'></div>
+                         <div class="card-content">
+                            <h2 class="text-xl font-bold">Floricultora</h2>
+                            <p class="text-subtle-light dark:text-subtle-dark">Vivero Flor Natura.</p>
+                        </div>
+                        <button class="card-button" data-coords="18.918495940485577, -98.4540181934832">
+                            <span class="material-symbols-outlined">location_on</span> Ver Ubicación Exacta
+                        </button>
+                    </div>
+
+                    <div class="card scroll-animate">
+                        <div class="card-image" style='background-image: url("assets/imgs/Obrea_Textil.jpg");'></div>
+                         <div class="card-content">
+                            <h2 class="text-xl font-bold">Obrera textil</h2>
+                            <p class="text-subtle-light dark:text-subtle-dark">Metepec.</p>
+                        </div>
+                        <button class="card-button" data-coords="18.93533773125839, -98.47411774985113">
+                            <span class="material-symbols-outlined">location_on</span> Ver Ubicación Exacta
+                        </button>
+                    </div>
+
+                    <div class="card scroll-animate">
+                        <div class="card-image" style='background-image: url("assets/imgs/Taquero.jpg");'></div>
+                         <div class="card-content">
+                            <h2 class="text-xl font-bold">Taquero</h2>
+                            <p class="text-subtle-light dark:text-subtle-dark">Iglesia De Santo Domingo.</p>
+                        </div>
+                        <button class="card-button" data-coords="18.906052401909783, -98.3734136036986">
+                            <span class="material-symbols-outlined">location_on</span> Ver Ubicación Exacta
+                        </button>
+                    </div>
+                    
+                </div>
+            </section>
+            
+            <section id="mapa" class="py-16 px-6 scroll-animate">
+                <div class="w-full max-w-md mx-auto text-center">
+                    <h2 class="text-3xl font-bold text-foreground-light dark:text-foreground-dark mb-4">¿Quieres planear tu ruta?</h2>
+                    <p class="text-lg text-subtle-light dark:text-subtle-dark mb-8">
+                        Visualiza todas las catrinas en un solo lugar y crea tu propio recorrido.
+                    </p>
+                    <a class="cta-button-map" href="https://www.google.com/maps/d/u/2/edit?mid=1B4cY5F3eKFiaGCEvPea7I8xxjSdtKzI&usp=sharing">
+                        🗺️ Ver Mapa Completo
+                    </a>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="assets/js/script.js"></script>
 </body>
+
 </html>
