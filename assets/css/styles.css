@@ -41,7 +41,7 @@ header.scrolled {
     width: 100%;
     background-position: center;
     background-repeat: no-repeat;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 21 / 9;
     background-size: cover;
     border-radius: 0.75rem; /* rounded-xl */
 }
