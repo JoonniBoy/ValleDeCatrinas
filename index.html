@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
 
@@ -45,6 +46,9 @@
         <header class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm transition-shadow duration-300">
             <div class="max-w-md mx-auto flex items-center p-4 md:max-w-6xl">
                 <h1 class="flex-1 text-xl font-bold text-center">Valle de Catrinas</h1>
+                <a href="#comida" class="flex items-center justify-center rounded-full h-10 w-10 text-foreground-light dark:text-foreground-dark hover:bg-primary/10 transition-colors">
+                    <span class="material-symbols-outlined">restaurant</span>
+                </a>
                 <a href="#mapa" class="flex items-center justify-center rounded-full h-10 w-10 text-foreground-light dark:text-foreground-dark hover:bg-primary/10 transition-colors">
                     <span class="material-symbols-outlined">map</span>
                 </a>
@@ -251,6 +255,30 @@
                 </div>
             </section>
             
+            <section id="comida" class="p-4 space-y-8">
+                <div class="text-center">
+                    <h2 class="text-3xl font-extrabold leading-tight tracking-tight text-foreground-light dark:text-foreground-dark">
+                        Para el Hambre
+                    </h2>
+                    <p class="mt-4 text-base text-subtle-light dark:text-subtle-dark">
+                        Recarga energías con la deliciosa gastronomía de Atlixco.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <div class="card scroll-animate">
+                        <div class="card-image" style='background-image: url("assets/imgs/Mercado_Benito_Juarez.png");'></div>
+                        <div class="card-content">
+                            <h2 class="text-xl font-bold">Mercado Benito Juárez</h2>
+                            <p class="text-subtle-light dark:text-subtle-dark">Delicioso pozole para el alma.</p>
+                        </div>
+                        <button class="card-button" data-coords="18.907335082361104, -98.43552818930581">
+                            <span class="material-symbols-outlined">location_on</span> Ver Ubicación Exacta
+                        </button>
+                    </div>
+                </div>
+            </section>
+
             <section id="mapa" class="py-16 px-6 scroll-animate">
                 <div class="w-full max-w-md mx-auto text-center">
                     <h2 class="text-3xl font-bold text-foreground-light dark:text-foreground-dark mb-4">¿Quieres planear tu ruta?</h2>
